@@ -174,7 +174,6 @@ public class ConnectionPool {
                         conn = newConnection();
                     } catch (SQLException e) {
                         System.out.println(" 创建数据库连接失败！ " + e.getMessage());
-                        return null;
                     }
                     pConn.setConnection(conn);
                 }

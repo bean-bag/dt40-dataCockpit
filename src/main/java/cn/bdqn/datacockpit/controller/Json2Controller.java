@@ -1,6 +1,5 @@
 package cn.bdqn.datacockpit.controller;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -10,9 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +18,6 @@ import cn.bdqn.datacockpit.datatable.DatatableResult;
 import cn.bdqn.datacockpit.datatable.IsSearchCondition;
 import cn.bdqn.datacockpit.datatable.SearchCondition;
 import cn.bdqn.datacockpit.entity.Analysistasks;
-import cn.bdqn.datacockpit.entity.Companyinfo;
 import cn.bdqn.datacockpit.entity.Datarelation;
 import cn.bdqn.datacockpit.entity.Result;
 import cn.bdqn.datacockpit.entity.Tableinfo;
@@ -30,15 +25,13 @@ import cn.bdqn.datacockpit.service.AnalysistasksService;
 import cn.bdqn.datacockpit.service.DatarelationService;
 import cn.bdqn.datacockpit.service.ResultService;
 import cn.bdqn.datacockpit.service.TableinfoService;
-import cn.bdqn.datacockpit.service.XsTableService;
 import cn.bdqn.datacockpit.utils.BaseDao;
-import cn.bdqn.datacockpit.utils.JdbcUtil;
 
 
 @Controller
 public class Json2Controller {
-    @Autowired
-    private XsTableService xs;
+//    @Autowired
+//    private XsTableService xs;
 
     @Autowired
     private TableinfoService ts;
@@ -85,7 +78,7 @@ public class Json2Controller {
     public Map<String,Object> datatable3(@IsSearchCondition SearchCondition searchCondition,
             HttpServletRequest request) {
 
-        HttpSession session = request.getSession();
+//        HttpSession session = request.getSession();
         
 //      ActiveUser user=(ActiveUser)session.getAttribute("activeUser");
 //      Integer cid=user.getCompanyId();
@@ -114,7 +107,7 @@ public class Json2Controller {
     public DatatableResult<Tableinfo> datatable(@IsSearchCondition SearchCondition searchCondition,
             HttpServletRequest req) {
         DatatableResult<Tableinfo> list = new DatatableResult<>();
-        HttpSession session = req.getSession();
+//        HttpSession session = req.getSession();
         
 //      ActiveUser user=(ActiveUser)session.getAttribute("activeUser");
 //      Integer cid=user.getCompanyId();
@@ -141,7 +134,7 @@ public class Json2Controller {
     @RequestMapping("/shuju_table")
     public Map<String,Object> shuju_table(Datarelation datarlation,HttpServletRequest req) throws Exception {
         Map<String, Object> map = new HashMap<String,Object>();
-        HttpSession session = req.getSession();
+//        HttpSession session = req.getSession();
         
 //      ActiveUser user=(ActiveUser)session.getAttribute("activeUser");
 //      Integer cid=user.getCompanyId();
@@ -167,7 +160,7 @@ public class Json2Controller {
     @RequestMapping(value = "shuju_0")
     public List<Analysistasks> getAllAnalysistasks(HttpServletRequest req){
         Analysistasks analysistasks = new Analysistasks();
-        HttpSession session = req.getSession();
+//        HttpSession session = req.getSession();
         
 //      ActiveUser user=(ActiveUser)session.getAttribute("activeUser");
 //      Integer cid=user.getCompanyId();

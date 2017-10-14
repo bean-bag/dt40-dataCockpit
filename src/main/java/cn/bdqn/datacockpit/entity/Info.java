@@ -7,7 +7,6 @@ public class Info {
 
     private String title;
     private Date publishDate;
-    private String date;
 
     private String details;
 

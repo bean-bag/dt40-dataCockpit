@@ -1,13 +1,10 @@
 package cn.bdqn.datacockpit.controller;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -386,7 +383,7 @@ public class AdminTilesController {
                 //存图形id
                 map.put("shows", attr[0]);
             } else if (i == 1) {
-                HttpSession session = req.getSession();
+                //HttpSession session = req.getSession();
                 //拼接新建表名为用户id+表明（防止重名）
                 tbName =No1Id+ ctp.getPingYin(attr[1]);
             } else if (2 * i - 1 <= attr.length) {

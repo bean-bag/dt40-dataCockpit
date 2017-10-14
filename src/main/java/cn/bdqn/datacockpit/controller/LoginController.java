@@ -21,7 +21,6 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -50,7 +49,7 @@ import cn.bdqn.datacockpit.utils.VerifyCodeUtils;
 @Controller
 @Scope("prototype")
 public class LoginController {
-    private static final Exception IncorrectCredentialsException = null;
+    //private static final Exception IncorrectCredentialsException = null;
 
     @Autowired
     private CompanyinfoService companyinfo;
@@ -112,7 +111,7 @@ public class LoginController {
         
         // 从session获取验证码方法中存入的验证码
         
-        String trueCode = (String) session.getAttribute("code");
+        //String trueCode = (String) session.getAttribute("code");
         // 对比验证码
         /*
          * if(!trueCode.equals(code2)){ //验证码不正确则返回不正确
@@ -165,7 +164,7 @@ public class LoginController {
         UsernamePasswordToken token = new UsernamePasswordToken(user.getPhone(), user.getPassword());
         try {
             subject.login(token);
-            Session session2 = subject.getSession();
+            //Session session2 = subject.getSession();
             session.setAttribute("phone", user.getPhone());
             return "redirect:/login2.shtml";
         } catch (Exception e) {
