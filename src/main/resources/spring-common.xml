@@ -22,7 +22,7 @@
 	</bean>		
 	
 	<!-- 用于初始化获得Spring对象的类 -->  
-    <bean id="springfactory" class="cn.bdqn.datacockpit.utils.SpringFactory"></bean> 
+    <!-- <bean id="springfactory" class="cn.bdqn.datacockpit.utils.SpringFactory"></bean>  -->
 
 	<!-- 读取数据库配置文件 -->
     <context:property-placeholder location="classpath:jdbc.properties" />

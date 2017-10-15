@@ -228,7 +228,7 @@ public class AdminTilesController {
 
     @RequestMapping("insertAdminReg")
     public String insertAdminReg(Userinfo record) {
-        int flag = us.insertSelective(record);
+        us.insertSelective(record);
         // 转发
         return "admin_shuju4.page";
     }

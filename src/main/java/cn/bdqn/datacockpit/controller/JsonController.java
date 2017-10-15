@@ -14,7 +14,6 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
@@ -65,7 +64,7 @@ public class JsonController {
     @RequestMapping(value = "dt_list")
     public DatatableResult<Userinfo> datatable(@IsSearchCondition SearchCondition searchCondition) {
         DatatableResult<Userinfo> list = new DatatableResult<>();
-        Userinfo rec = new Userinfo();
+        //Userinfo rec = new Userinfo();
         return list;
     }
 
@@ -129,7 +128,7 @@ public class JsonController {
         String tableName = request.getParameter("tableName");
         String tName = tableName;
         ChineseToPinYin ctp = new ChineseToPinYin();
-        HttpSession session = request.getSession();
+        //HttpSession session = request.getSession();
 
 //      ActiveUser user=(ActiveUser)session.getAttribute("activeUser");
 //      Integer cid=user.getCompanyId();

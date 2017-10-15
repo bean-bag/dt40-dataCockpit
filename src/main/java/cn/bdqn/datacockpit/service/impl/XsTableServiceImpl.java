@@ -39,7 +39,6 @@ public class XsTableServiceImpl implements XsTableService {
 
     @Override
     public int getTableList(String tableName) {
-        // TODO Auto-generated method stub
         return xm.getTableList(tableName);
     }
 
